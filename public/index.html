@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lipton Icetea Homepage</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="javascripts/ol.js"></script>
+
+    <link rel="stylesheet" href="stylesheets/ol.css">
+</head>
+<body>
+
+<div id="loginScreenID">
+    <form>
+
+        <div class="imgcontainer">
+            <img src="images/lucio.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <div class="login">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" id="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="psw" required>
+
+                <button id="bntLogin" type="button">Login</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div id="logoutDivID">
+    <button id="bntLogout" type="button">Logout</button>
+</div>
+
+<div id="mainScreenID">
+    <div class="mainScreen">
+        <div class="row">
+            <div class="column_tripple_butt">
+                <div class="tbl_buttons">
+                    <button class="btn_addcontact" id="btn_showMineID">Show Mine</button>
+                </div>
+            </div>
+            <div class="column_tripple_butt">
+                <div class="tbl_buttons">
+                    <button class="btn_addcontact" id="btn_showAllID">Show All</button>
+                </div>
+            </div>
+            <div class="column_tripple_butt">
+                <div class="tbl_buttons">
+                    <button class="btn_addcontact" id="btn_addNewID">Add New</button>
+                </div>
+            </div>
+        </div>
+        <div class="mapBox">
+            <div class="contacts" id="contactsID">
+                <p>Anna</p>
+                <p>Bob</p>
+                <p>Carsten</p>
+            </div>
+            <div class="mapWrapper">
+                <div id="map"></div>
+                <script src="javascripts/map.js"></script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div id="add_ID">
+        <form>
+            <div class="input_box">
+                <label for="add_vorname" class="input_lable">Vorname</label>
+                <input type="text" id="add_vorname" name="add_vorname" required/>
+                <br>
+                <label for="add_name" class="input_lable">Name</label>
+                <input type="text" id="add_name" name="add_name" required/>
+                <br>
+                <label for="add_strasse" class="input_lable">Straße</label>
+                <input type="text" id="add_strasse" name="add_strasse" required/>
+                <br>
+                <label for="add_plz" class="input_lable">PLZ</label>
+                <input type="text" id="add_plz" name="add_plz" required/>
+                <br>
+                <label for="add_stadt" class="input_lable">Stadt</label>
+                <input type="text" id="add_stadt" name="add_stadt" required/>
+                <br>
+                <label for="add_bundesland" class="input_lable">Bundesland</label>
+                <input type="text" id="add_bundesland" name="add_bundesland"/>
+                <br>
+                <label for="add_land" class="input_lable">Land</label>
+                <input type="text" id="add_land" name="add_land"/>
+                <br>
+                <label for="add_privat" class="input_lable">Privat</label>
+                <input type="checkbox" id="add_privat" name="add_privat" checked/>
+                <br>
+                <label for="add_owner" class="input_lable">Owner</label>
+                <select id="add_owner">
+                    <option value="self" selected>Self</option>
+                    <option value="normalo">Normalo</option>
+                </select>
+                <br>
+                <input type="button" id="btn_add" name="btn_add" value="Add"/>
+            </div>
+        </form>
+    </div>
+
+    <div id="update_delete_ID">
+        <form>
+            <div class="input_box">
+                <label for="delete_vorname" class="input_lable">Vorname</label>
+                <input type="text" id="delete_vorname" name="delete_vorname" value="Bob" required/>
+                <br>
+                <label for="delete_name" class="input_lable">Name</label>
+                <input type="text" id="delete_name" name="delete_name" value="Brown" required/>
+                <br>
+                <label for="delete_strasse" class="input_lable">Straße</label>
+                <input type="text" id="delete_strasse" name="delete_strasse" value="Berliner Straße 22" required/>
+                <br>
+                <label for="delete_plz" class="input_lable">PLZ</label>
+                <input type="text" id="delete_plz" name="delete_plz" value="10715" required/>
+                <br>
+                <label for="delete_stadt" class="input_lable">Stadt</label>
+                <input type="text" id="delete_stadt" name="delete_stadt" value="Berlin" required/>
+                <br>
+                <label for="delete_bundesland" class="input_lable">Bundesland</label>
+                <input type="text" id="delete_bundesland" name="delete_bundesland" value="Berlin"/>
+                <br>
+                <label for="delete_land" class="input_lable">Land</label>
+                <input type="text" id="delete_land" name="delete_land" value="Deutschland"/>
+                <br>
+                <label for="delete_privat" class="input_lable">Privat</label>
+                <input type="checkbox" id="delete_privat" name="delete_privat" checked/>
+                <br>
+                <label for="delete_owner" class="input_lable">Owner</label>
+                <select id="delete_owner">
+                    <option value="self">Self</option>
+                    <option value="normalo" selected>Normalo</option>
+                </select>
+                <br>
+                <input type="button" id="btn_delete" name="btn_delete" value="Delete"/>
+                <input type="button" id="btn_update" name="btn_update" value="Update"/>
+                <input type="button" id="btn_cancel" name="btn_cancel" value="Cancel"/>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+</body>
+<footer>
+    <script src="javascripts/ShowLoginScreen.js"></script>
+</footer>
+</html>
