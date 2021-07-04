@@ -41,12 +41,14 @@ const map = new ol.Map({
 });
 
 function createNewMarker(lon, lat){
-    let newlyCreatedFeature = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.transform([lon, lat], 'EPSG:4326',
-            'EPSG:3857'))
-    });
+    if(lon != null && lat != null) {
+        let newlyCreatedFeature = new ol.Feature({
+            geometry: new ol.geom.Point(ol.proj.transform([lon, lat], 'EPSG:4326',
+                'EPSG:3857'))
+        });
 
-    vektorLayer.getSource().addFeature(newlyCreatedFeature);
+        vektorLayer.getSource().addFeature(newlyCreatedFeature);
+    }
 }
 
 function clearMarkers() {
