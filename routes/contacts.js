@@ -23,7 +23,7 @@ router.get('/', function (req, res, next) {
 router.get('/:id', function (req, res, next) {
     if (req.params?.id != null) {
         let id = req.params.id;
-        mongo().collection("contacts").findOne({_id: id}, function (err, result) {
+        mongo().collection("contacts").findOne({"_id": ObjectId(id)}, function (err, result) {
             if (err) throw err;
             res.status(200).json(result);
         })

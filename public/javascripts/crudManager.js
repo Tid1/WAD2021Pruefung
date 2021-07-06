@@ -52,8 +52,11 @@ async function getContact(id) {
             headers: {
                 "Content-Type": "application/json; charset=utf-8",
             }});
-        return await response.json();
+        let responseJSON = await response.json();
+        console.log(responseJSON);
+        return responseJSON;
     } catch (err){
+        console.log(err);
         return null;
     }
 }

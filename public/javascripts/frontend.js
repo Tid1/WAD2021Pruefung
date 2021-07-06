@@ -144,6 +144,7 @@ async function updateButtonClicked(contactID){
 }
 
 async function deleteButtonClicked(contactID){
+    let contactToUpdate = await getContact(contactID);
     if (userCurrentlyLoggedIn.isAdmin || !userCurrentlyLoggedIn.isAdmin && contactToUpdate.owner.toLowerCase() === "normalo"){
         await deleteContact(contactID);
     } else {
